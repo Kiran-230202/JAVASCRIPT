@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .xyz{
+            animation: anime 2s 0s;
+        }
+
+        .box{
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        @keyframes anime {
+            from{transform: translateX(0x);}
+            to{transform: translateX(100px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="pexels-almada-studio-624929.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-binyamin-mellish-1396122.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-daniel-frank-688835.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-ibrahim-boran-279734.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-johnmark-smith-253096.jpg" alt="" width="100%" height="100%">
+    </div>
+
+    <script>
+        index=0;
+
+        function slider(){
+            img_arr = document.getElementsByTagName('img');
+            for(i=0;i<img_arr.length;i++){
+                img_arr[i].style.display="none";
+                img_arr[i].classList.add('xyz');
+            }
+            
+            img_arr[index].style.display="block";
+            index++;
+
+            if(index==4){
+                index=0;
+            }
+            setTimeout("slider()",1000);
+        }
+
+        slider()
+    </script>
+</body>
+</html>
