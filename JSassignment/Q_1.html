@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: rgb(248, 223, 223);
+      }
+      h1 {
+        color: red;
+      }
+      h2 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Q1.What is JavaScript?</h1>
+    <h2>
+      =>JavaScript was initially created to make "web pages alive"<br />
+      The programs in this language are called scripts. They can be written
+      right in a web page’s HTML and run automatically as the page loads.
+      JavaScript can
+    </h2>
+    <h1>Q2.What is the use of isNaN function?</h1>
+    <h2>
+      =>In JavaScript NaN is short for "Not-a-Number". The isNaN() method
+      returns true if a value is NaN. The isNaN() method converts the value to a
+      number before testing it.
+    </h2>
+    <h1>Q3.What is negative Infinity?</h1>
+    <h2>
+      =>The negative infinity in JavaScript is a constant value that is used to
+      represent a value that is the lowest available. This means that no other
+      number is lesser than this value. It can be generated using a self-made
+      function or by an arithmetic operation.
+    </h2>
+    <h1>Q4. Which company developed JavaScript?</h1>
+    <h2>
+      =>JavaScript was invented by Brendan Eich in 1995. It was developed for
+      Netscape 2, and became the ECMA-262 standard in 1997. After Netscape
+      handed JavaScript over to ECMA, the Mozilla foundation continued to
+      develop JavaScript for the Firefox browser. Mozilla's latest version was
+      1.8.5. (Identical to ES5).
+    </h2>
+    <h1>Q5.What are undeclared and undefined variables?</h1>
+    <h2>
+      =>Undefi ned means you have created a variable but it does not have a
+      value. Undeclared means you do not have that variable at all.
+    </h2>
+    <h1>Q6.Write the code for adding new elements dynamically?</h1>
+    <div id="box">
+      <h1 id="p1">hee</h1>
+      <h1 id="p2">hee</h1>
+      <h1 id="p3">hee</h1>
+      <h1 id="p4">hee</h1>
+    </div>
+
+    <h1>Q7. What is the difference between ViewState and SessionState?</h1>
+    <table border="1" cellspacing="10px" cellpadding="20px">
+      <thead>
+        <tr>
+          <th>ViewState</th>
+          <th>SessionState</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Maintained at page level only.</td>
+        <td>Maintained at session level.</td>
+      </tr>
+      <tr>
+        <td>
+          View state can only be visible from a single page and not multiple
+          pages.
+        </td>
+        <td>
+          Session state value availability is across all pages available in a
+          user session.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          It will retain values in the event of a postback operation occurring.
+        </td>
+        <td>
+          In session state, user data remains in the server. Data is available
+          to user until the browser is closed or there is session expiration.
+        </td>
+      </tr>
+      <tr>
+        <td>Information is stored on the client’s end only.</td>
+        <td>Information is stored on the server.</td>
+      </tr>
+      <tr>
+        <td>used to allow the persistence of page-instance-specific data.</td>
+        <td>
+          used for the persistence of user-specific data on the server’s end.
+        </td>
+      </tr>
+      <tr>
+        <td>ViewState values are lost/cleared when new page is loaded.</td>
+        <td>
+          SessionState can be cleared by programmer or user or in case of
+          timeouts.
+        </td>
+      </tr>
+    </table>
+
+    <h1>Q.8What is === operator?</h1>
+    <h2>
+      =>The strict equality ( === ) operator checks whether its two operands are
+      equal, returning a Boolean result. Unlike the equality operator, the
+      strict equality operator always considers operands of different types to
+      be different.
+    </h2>
+
+    <h1>Q.9 How can the style/class of an element be changed?</h1>
+    <h2>
+      => We can change, add or remove any CSS property from an HTML element on
+      the occurrence of any event with the help of JavaScript. There are two
+      approaches that allow us to achieve this task. <br />
+
+      Approach 1: Changing CSS with the help of the style property:<br />
+      Syntax:document.getElementById("id").style.property = new_style;<br />
+      Approach 2: Changing the class itself – We can use two properties that can
+      be used to manipulate the classes. <br />
+      Syntax:document.getElementById("id").classList
+    </h2>
+
+    <h1>Q10. How to read and write a file using JavaScript?</h1>
+    <h2>
+      =>The fs.readFile() and rs.writeFile() methods are used to read and write
+      of a file using javascript. <br />
+      <br />
+      The file is read using the fs.readFile() function, which is an inbuilt
+      method. This technique reads the full file into memory and stores it in a
+      buffer. <br />
+      Syntax: fs.readFile( file_name, encoding, callback_function ) <br />
+      <br />
+      The fs.writeFile() function is used to write data to a file in an
+      asynchronous manner. If the file already exists, it will be replaced.
+      <br />
+      Syntax: fs.writeFile( file_name, data, options, callback )
+    </h2>
+
+    <h1>Q11. What are all the looping structures in JavaScript?</h1>
+    <h2>
+      =>JavaScript supports different kinds of loops: <br />
+      <br />
+
+      for - loops through a block of code a number of times <br />
+      for/in - loops through the properties of an object<br />
+      for/of - loops through the values of an iterable object<br />
+      while - loops through a block of code while a specified condition is
+      true<br />
+      do/while - also loops through a block of code while a specified condition
+      is true<br />
+    </h2>
+    <h1>
+      Q12. How can you convert the string of any base to an integer in
+      JavaScript?
+    </h1>
+    <h2>
+      =>To convert a string to an integer parseInt(), Number(), and Unary
+      operator(+) function is used in javascript. parseInt() function returns
+      Nan( not a number) when the string doesn’t contain number. If a string
+      with a number is sent, then only that number will be returned as the
+      output. <br />
+    </h2>
+    <h1>Q13. What is the function of the delete operator?</h1>
+    <h2>
+      =>The delete operator removes a property from an object. If the property's
+      value is an object and there are no more references to the object, the
+      object held by that property is eventually released automatically. <br />
+      Syntax: <br />
+      delete object.property delete object[property]
+    </h2>
+
+    <h1>
+      Q14. What are all the types of Pop up boxes available in JavaScript?
+    </h1>
+    <h2>
+      =>JavaScript has three kind of popup boxes: Alert box, Confirm box, and
+      Prompt box.
+    </h2>
+
+    <h1>Q15.What is the use of Void (0)?</h1>
+    <h2>
+      =>javascript: void(0) means return undefined as a primitive value. We use
+      this to prevent any negative effects on a webpage when we insert some
+      expression. <br />
+
+      For example, in the case of URL hyperlinks. Hyperlinks open by reloading
+      the page when the user clicks on the link. When you need to run some other
+      code in such cases, you can use javascript: void(0). Syntax
+      <!-- <a href="javascript:console.log('1');">Link</a> -->
+    </h2>
+
+    <h1>Q16.How can a page be forced to load another page in JavaScript?</h1>
+    <h2>
+      =>In JavaScript, we can use window.location object to force a page to load
+      another page. We can use the location object to set the URL of a new page.
+      <br />
+      There are different ways – window.location.href property,
+      window.location.assign() and window.location.replace() methods, to set the
+      URL of a new page using the location object. <br />
+      Syntax window.location.href = "new_url";
+    </h2>
+    <h1>Q17.hat are the disadvantages of using innerHTML in JavaScript?</h1>
+
+    <h2>
+      =>Inner HTML is slow Inner HTML is slow because when we use the inner HTML
+      property in the code it allows us to change using the JavaScript language.
+      It is very slow because as inner HTML already parses the content even we
+      have to parse the content again so that’s why it takes time. <br>
+       <b style="color: black ">Event handlers attached to any DOM element are preserved</b> <br>
+       <b style="color: black ">Replacement is done everywhere</b> <br>
+       <b style="color: black ">It is not possible to append innerHTML</b> <br>
+       <b style="color: black ">Breaks the document</b> <br>
+       <b style="color: black ">Used for Cross-site Scripting</b> <br>
+    </h2>
+
+    <script>
+      div_tag = document.getElementById("box");
+      h1_tag = document.getElementById("p1");
+      console.log(h1_tag);
+
+      h2_tag = document.createElement("h2"); //<h2></h2>
+
+      h2_txt = document.createTextNode("This is Heading 2 throught JS"); // This is Heading 2 throught JS
+
+      h2_tag.append(h2_txt);
+      div_tag.append(h2_tag);
+    </script>
+  </body>
+</html>
