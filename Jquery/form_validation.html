@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        .xyz{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+    Name:<input type="text" id="nm" value="" /><br /><br />
+    <h5 id="nmh">Name is required</h5>
+    Mobile:<input type="text" id="mn" value="" />
+    <button id="btn">sub</button>
+    <h5 id="mnh">Number is required</h5>
+  </form>
+    <script>
+
+        $('#nmh').hide();
+        $('#mnh').hide();
+
+        $('#nm').blur(function(){
+            username=$('#nm').val();
+            $('#nm').blur(function(){
+                if(username.length<3||username.length>10){
+                $('#nmh').show();
+                $('#nmh').html("**length of username must be between 3 and 10")
+            }
+            })
+            if(username.length==""){
+                $('#nmh').show();
+                $('#nmh').addClass('xyz');
+                $('#nm').css("border-color","red");
+            }
+
+            else if(username.length<3||username.length>10){
+                $('#nmh').show();
+                $('#nmh').html("**length of username must be between 3 and 10")
+            }
+
+            else{
+                $('#nmh').hide();
+                $('#nm').css("border-color","black");
+            }
+
+        })
+
+    
+        
+    </script>
+  </body>
+</html>

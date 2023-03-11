@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider{
+            width: 100%;
+            height: 100vh;
+        }
+
+        img{
+            /* transform: translateX(300px); */
+          
+        }
+
+        .xyz{
+            
+            animation: anime 10s linear;
+
+        }
+
+        @keyframes anime {
+            from{
+                transform: translateX(0%);
+            }
+
+            to{
+                transform: translateX(-100%);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+
+        <img src="pexels-almada-studio-624929.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-binyamin-mellish-1396122.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-daniel-frank-688835.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-ibrahim-boran-279734.jpg" alt="" width="100%" height="100%">
+        <img src="pexels-johnmark-smith-253096.jpg" alt="" width="100%" height="100%">
+    </div>
+
+    <script>
+        img_tag = document.getElementsByTagName('img');
+        console.log(img_tag);
+        index=0;
+        function slider(){
+            for(i=0;i<img_tag.length;i++){
+                img_tag[i].style.display="none"
+
+                img_tag[i].classList.add('xyz');
+            }
+
+            img_tag[index].style.display="block";
+            index++;
+
+
+             
+            if(index==5){
+                index=0;
+            }
+
+
+            setTimeout("slider()",1000);
+        }
+
+        slider();
+    </script>
+    
+</body>
+</html>

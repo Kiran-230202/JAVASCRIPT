@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="box" id="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+      repudiandae quod, at, ad cum nemo laborum ratione nulla facilis in ex
+      corporis, earum alias quisquam!
+    </div>
+
+    <button class="btn" id="btn">hi</button>
+
+    <script>
+        
+        $("#btn").click(function(){
+            res=$('#box').text();
+            alert(res);
+            
+        });
+            
+        
+    </script>
+  </body>
+</html>

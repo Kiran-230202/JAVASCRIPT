@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        width: 100%;
+        background: rebeccapurple;
+        position: relative;
+      }
+      ul {
+        text-align: center;
+        word-spacing: 20px;
+        padding: 20px;
+      }
+
+      ul li {
+        display: inline;
+      }
+
+      ul li a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      i{
+        position: absolute;
+        top: 25px;
+        right: 50px;
+      }
+
+      .box{
+        height: 700px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        background-color: tomato;
+        transform: translateX(-100%);
+        transition: 2s;
+      }
+
+      .box ul li{
+        display: block;
+        margin: 20px 20px;
+      }
+
+      .xyz{
+        transform: translateX(0%);
+      }
+
+      @media (max-width:500px) {
+        .header ul{
+            display: none;
+        }
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <i class="fa-solid fa-bars" id="menu" ></i>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contactus</a></li>
+        <li><a href="">blog</a></li>
+      </ul>
+    </div>
+    <div class="box" id="box">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">contactus</a></li>
+            <li><a href="">blog</a></li>
+          </ul>
+
+    </div>
+
+    <script>
+        b=document.getElementById('box');
+        btn=document.getElementById('menu');
+
+        btn.addEventListener('click',test);
+
+        function test() {
+
+            b.classList.toggle('xyz');
+            
+            
+        }
+
+    </script>
+  </body>
+</html>

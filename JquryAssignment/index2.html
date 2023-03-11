@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .xyz {
+        width: 500px;
+        height: 500px;
+        background-color: coral;
+        font-family: cursive;
+        border: 2px solid red;
+        border-radius: 25px;
+        padding: 25px;
+        margin: 50px;
+      }
+
+      .yt{
+        width: 800px;
+        height: 500px;
+        background-color: rgb(21, 70, 114);
+        font-family: cursive;
+        border: 10px solid rgb(2, 1, 1);
+        color: rgb(160, 37, 115);
+        border-radius: 25px;
+        padding: 25px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>
+      Q. How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+      Jquery , JQuery Animation?
+    </h1>
+
+    <h2 id="h2">
+      jQuery has several methods for CSS manipulation. <br />
+
+      addClass() - Adds one or more classes to the selected elements <br />
+      removeClass() - Removes one or more classes from the selected elements
+      <br />
+      toggleClass() - Toggles between adding/removing classes from the selected
+      elements <br />
+      css() - Sets or returns the style attribute
+    </h2>
+
+    <div id="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit nihil
+      asperiores placeat ullam iure blanditiis dolores odit harum amet, esse
+      maiores dolor praesentium omnis nisi aliquam sed sapiente voluptate earum
+      non eos autem itaque quia natus? Nihil, repellat amet adipisci deserunt
+      quae recusandae a minima exercitationem consequatur iusto quidem eveniet
+      atque numquam molestias aliquid sunt!
+    </div>
+
+    <div id="txt">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt fugiat cum,
+      a consequuntur quis unde deleniti beatae reiciendis voluptate tempore
+      eaque autem commodi reprehenderit aperiam atque! Velit possimus esse quas,
+      magni quisquam repellendus dolorum, doloribus est voluptas debitis iure.
+      Eligendi necessitatibus deserunt quibusdam! Debitis ab, eligendi
+      voluptates dolores quisquam numquam quod porro dolorum quam perspiciatis?
+      Soluta beatae nostrum quia ratione.
+    </div>
+
+    <script>
+      $("#h2").click(function () {
+        $(this).css("background", "lightblue");
+      });
+
+      $("#h2").dblclick(function () {
+        $(this).css("background", "white");
+      });
+
+      $("#box").click(function () {
+        $(this).addClass("xyz");
+      });
+
+      $("#box").dblclick(function () {
+        $(this).removeClass("xyz");
+      });
+
+      $("#txt").click(function () {
+        $(this).toggleClass("yt");
+      });
+    </script>
+  </body>
+</html>

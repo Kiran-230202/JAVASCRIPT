@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         .image{
-            height: 500px;
+            height: 800px;
             overflow: hidden;
-
+            position: relative;
         }
 
     </style>
@@ -34,11 +39,11 @@
 
             img_arr[index].style.display="block";
             index++;
-            if(index==4){
+            if(index==5){
                 index=0;
 
             }
-            setTimeout("slider()",100);
+            setTimeout("slider()",1000);
 
         }
         slider();

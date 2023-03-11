@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+
+   Name: <input type="text"  id="nm"><br>
+   <h5 id="h1">Name is required!!</h5><br>
+   Email:<input type="text"  id="email"><br>
+   <h5 id="h2"> Email is required!!</h5><br>
+   Mobile:<input type="text" id="mobile"><br>
+   <h5 id="h3">Mobile number is required!! </h5>
+
+  <br><button id="btn">Submit</button>
+
+   <script>
+    $('#h1').hide();
+    $('#h2').hide();
+    $('#h3').hide();
+
+    $(document).ready(function(){
+
+        $('#nm').blur(function(){
+        username = $('#nm').val();
+
+        if(username.length == ""){
+            $('#h1').show();
+        }
+
+        else if(username.length<3 || username.length>10){
+            $('h1').show();
+            $('#h1').html("**length of username must be between 3 and 10")
+        }
+        else{
+            $('#h1').hide();
+        }
+    });
+
+    $('#email').blur(function(){
+        email = $('#email').val();
+         x =/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+        if(x.test(email)){
+            $('#h2').hide();
+        }
+        else{
+            $('#h2').show();
+        }
+    });
+
+    $('#mobile').blur(function(){
+        mobile =$('#mobile').val();
+        y =/^(0|91)?[6-9][0-9]{9}$/;;
+        if(y.test(mobile)){
+            $('#h3').hide();
+        }
+        else{
+            $('#h3').show();
+        }
+    })
+
+
+
+
+    });
+
+   
+
+   </script>
+
+    
+</body>
+</html>
